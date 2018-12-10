@@ -70,7 +70,9 @@ void Widget::exposeEvent(QExposeEvent *)
 
         this->glDepthFunc(GL_LEQUAL);
         this->glClearColor(0.0, 0.0, 0.0, 1.0);
-//        this->glViewport(0, 0, (GLsizei) this->width(), (GLsizei) this->height());
+        this->glViewport(0, 0, (GLsizei) this->width(), (GLsizei) this->height());
+        m_window_size_x = this->width();
+        m_window_size_y = this->height();
 //        this->glMatrixMode(GL_PROJECTION);
 //        this->glLoadIdentity();
 //        this->glFrustum(-2.0, 2.0, -2.0, 2.0, -1.5, 20.0);
